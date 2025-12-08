@@ -5,20 +5,20 @@
 class Logviewer < Formula
   desc "CLI log client for multiple sources (Splunk, K8s, Docker, etc)"
   homepage "https://github.com/bascanada/logviewer"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.1/logviewer_Darwin_x86_64.tar.gz"
-      sha256 "6897d1b23ad1e1b64b3835f2ba1fff1d31d36360248d94c5f84954b7e60a03f3"
+      url "https://github.com/bascanada/logviewer/releases/download/v0.1.2/logviewer_Darwin_x86_64.tar.gz"
+      sha256 "757022078247a359ea613599e3291959f6ed7217bd5b76795a46576bbc9f98b0"
 
       def install
         bin.install "logviewer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.1/logviewer_Darwin_arm64.tar.gz"
-      sha256 "50428b4f068a1167d3ff8a53f15d4fec1e19b4f7b960fa83331a72ba0b75b14a"
+      url "https://github.com/bascanada/logviewer/releases/download/v0.1.2/logviewer_Darwin_arm64.tar.gz"
+      sha256 "e7e6fca8b04beeb9d5c20309f1e8b3949ba513decaa8d333605b7a263fd07684"
 
       def install
         bin.install "logviewer"
@@ -28,15 +28,15 @@ class Logviewer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.1/logviewer_Linux_x86_64.tar.gz"
-      sha256 "b65a6cde6ce3451d3e6e4c2c66437195c41a4efa91135b550889176b997ec076"
+      url "https://github.com/bascanada/logviewer/releases/download/v0.1.2/logviewer_Linux_x86_64.tar.gz"
+      sha256 "9e1e089c1289f4ac6abdb682d49581d0855bdcafd1460b72fbf9395c5a2eb3ce"
       def install
         bin.install "logviewer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.1/logviewer_Linux_arm64.tar.gz"
-      sha256 "9cff38504a3e276900495c783b06529f69d86ba1a90a00a6707efbeb40c3dd4a"
+      url "https://github.com/bascanada/logviewer/releases/download/v0.1.2/logviewer_Linux_arm64.tar.gz"
+      sha256 "d81140413394941c96d57f29c0ee9631611632f65b2b7a82b745a4d2208575ee"
       def install
         bin.install "logviewer"
       end
