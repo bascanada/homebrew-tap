@@ -1,11 +1,8 @@
-# Homebrew Cask for Harmonium Plugins
-# This file should be placed in bascanada/homebrew-tap/Casks/harmonium-plugins.rb
-
 cask "harmonium-plugins" do
   version "0.0.4"
   sha256 "e82c1f90b163fdb5dcb59eab04e3f03e23c2c096b8e78e252c71d7e822f18f8c"
 
-  url "https://github.com/bascanada/harmonium/releases/download/v#{version}/harmonium-plugins-macos-universal.zip"
+  url "https://github.com/bascanada/harmonium/releases/download/#{version}/harmonium-plugins-macos-universal.zip"
   name "Harmonium Plugins"
   desc "AI-powered generative music VST3/CLAP plugins"
   homepage "https://github.com/bascanada/harmonium"
