@@ -14,3 +14,9 @@ brew install <package-name>
 ## Packages
 
 - **logviewer**: A log viewer utility.
+- **harmonium**: A cli/lib to generate procedural music
+
+
+## Casks
+
+- **harmonium-plugins**: VST/Clap plugin for harmonium
