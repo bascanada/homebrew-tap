@@ -2,8 +2,8 @@
 # This file should be placed in bascanada/homebrew-tap/Casks/harmonium-plugins.rb
 
 cask "harmonium-plugins" do
-  version "0.0.2"
-  sha256 "daa0f90a1a06c3bb2599d3f6e8bd9303837d2289b62f9053ce737704623d38ee"
+  version "0.0.4"
+  sha256 "e82c1f90b163fdb5dcb59eab04e3f03e23c2c096b8e78e252c71d7e822f18f8c"
 
   url "https://github.com/bascanada/harmonium/releases/download/v#{version}/harmonium-plugins-macos-universal.zip"
   name "Harmonium Plugins"
@@ -12,6 +12,12 @@ cask "harmonium-plugins" do
 
   artifact "harmonium.vst3", target: "~/Library/Audio/Plug-Ins/VST3/harmonium.vst3"
   artifact "harmonium.clap", target: "~/Library/Audio/Plug-Ins/CLAP/harmonium.clap"
+
+  # Remove quarantine to bypass Gatekeeper for unsigned plugins
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-cr", "#{Dir.home}/Library/Audio/Plug-Ins/VST3/harmonium.vst3"]
+    system_command "/usr/bin/xattr", args: ["-cr", "#{Dir.home}/Library/Audio/Plug-Ins/CLAP/harmonium.clap"]
+  end
 
   uninstall delete: [
     "~/Library/Audio/Plug-Ins/VST3/harmonium.vst3",
