@@ -5,20 +5,20 @@
 class Logviewer < Formula
   desc ""
   homepage ""
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.9/logviewer_Darwin_x86_64.tar.gz"
-      sha256 "f73e367df84268916d1030cf078f012e14d0edbd390597279df81ef7e4d0c0d7"
+      url "https://github.com/bascanada/logviewer/releases/download/v0.1.10/logviewer_Darwin_x86_64.tar.gz"
+      sha256 "1759a271a766c5044a2c5dcb80b1d6ea3b6741bfc81a72fc075eb4334820ee2c"
 
       def install
         bin.install "logviewer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.9/logviewer_Darwin_arm64.tar.gz"
-      sha256 "8651e1b2b40d4a7bf026f7047dfa5bdebfb35edf996fc2afaa1f4ecc2a83f551"
+      url "https://github.com/bascanada/logviewer/releases/download/v0.1.10/logviewer_Darwin_arm64.tar.gz"
+      sha256 "cc1f843ddeeb69d49e2e9eb36fd5ee69425980c3f3d9ac05c6310d9bdbfc1f77"
 
       def install
         bin.install "logviewer"
@@ -28,15 +28,15 @@ class Logviewer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.9/logviewer_Linux_x86_64.tar.gz"
-      sha256 "4463cec92e693ad0b53b8d7d59ec7f1ba4277c55a685c51d4155c928e711683e"
+      url "https://github.com/bascanada/logviewer/releases/download/v0.1.10/logviewer_Linux_x86_64.tar.gz"
+      sha256 "c9c155e9c3fd6f820c07edc255e361ff3496d8953c3582d0eca7cc85034fd929"
       def install
         bin.install "logviewer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.9/logviewer_Linux_arm64.tar.gz"
-      sha256 "50455dc5bcc7136f6f1a67e54e12e0def28f728423e68d989bb642889dc971c7"
+      url "https://github.com/bascanada/logviewer/releases/download/v0.1.10/logviewer_Linux_arm64.tar.gz"
+      sha256 "679b5b251b317966260e07bfbc596f5bf07d9382f1159a0c7881ff53cacbc639"
       def install
         bin.install "logviewer"
       end
