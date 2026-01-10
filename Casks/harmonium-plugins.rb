@@ -1,6 +1,6 @@
 cask "harmonium-plugins" do
-  version "0.0.7"
-  sha256 "7c8134ae05b65b4713699620579cf121d6c80b15a92910ad1dd68743b86971e4"
+  version "0.0.12"
+  sha256 "b27fff203d1dc55176901d66cb39cc32a964f66d7ee73f348debea3419046a79"
 
   url "https://github.com/bascanada/harmonium/releases/download/v#{version}/harmonium-plugins-macos-universal.zip"
   name "Harmonium Plugins"
