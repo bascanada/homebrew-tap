@@ -4,10 +4,10 @@
 class Harmonium < Formula
   desc "AI-powered procedural music generator CLI"
   homepage "https://github.com/bascanada/harmonium"
-  url "https://github.com/bascanada/harmonium/releases/download/v0.0.7/harmonium-cli-macos-universal.tar.gz"
-  sha256 "bd216c3b60c7cf0f34903cfa6d5d90f05686447f971adb97905073fd9a10da4e"
+  url "https://github.com/bascanada/harmonium/releases/download/v0.0.12/harmonium-cli-macos-universal.tar.gz"
+  sha256 "bfa53bab7e4a9af92f2078b3a224b46c173f3eff179bfae69bce78895740aa5b"
   license "MIT"
-  version "0.0.7"
+  version "0.0.12"
 
   def install
     bin.install "harmonium"
