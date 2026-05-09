@@ -5,22 +5,22 @@
 class Logviewer < Formula
   desc ""
   homepage ""
-  version "0.1.10"
+  version "0.1.21"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.10/logviewer_Darwin_x86_64.tar.gz"
-      sha256 "1759a271a766c5044a2c5dcb80b1d6ea3b6741bfc81a72fc075eb4334820ee2c"
+      url "https://github.com/estran-studio/logviewer/releases/download/v0.1.21/logviewer_Darwin_x86_64.tar.gz"
+      sha256 "1bc3b3f854bad57aedb35b403e3c1aaef9be515452197f8aa941fab51ac4516a"
 
-      def install
+      define_method(:install) do
         bin.install "logviewer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.10/logviewer_Darwin_arm64.tar.gz"
-      sha256 "cc1f843ddeeb69d49e2e9eb36fd5ee69425980c3f3d9ac05c6310d9bdbfc1f77"
+      url "https://github.com/estran-studio/logviewer/releases/download/v0.1.21/logviewer_Darwin_arm64.tar.gz"
+      sha256 "3ad67229d70413e33ed9a83996d0a5cc18c3e63e52f486ee663e0009d608866a"
 
-      def install
+      define_method(:install) do
         bin.install "logviewer"
       end
     end
@@ -28,16 +28,16 @@ class Logviewer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.10/logviewer_Linux_x86_64.tar.gz"
-      sha256 "c9c155e9c3fd6f820c07edc255e361ff3496d8953c3582d0eca7cc85034fd929"
-      def install
+      url "https://github.com/estran-studio/logviewer/releases/download/v0.1.21/logviewer_Linux_x86_64.tar.gz"
+      sha256 "e9f6b5bbd4ba9d2d31a19d53fef78f911c27555ef838d081ea7d0f373fff337e"
+      define_method(:install) do
         bin.install "logviewer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bascanada/logviewer/releases/download/v0.1.10/logviewer_Linux_arm64.tar.gz"
-      sha256 "679b5b251b317966260e07bfbc596f5bf07d9382f1159a0c7881ff53cacbc639"
-      def install
+      url "https://github.com/estran-studio/logviewer/releases/download/v0.1.21/logviewer_Linux_arm64.tar.gz"
+      sha256 "877c98ac7485b818cbc03dffe804f530ce11eba7bcf3b0239c54d8e73d43a493"
+      define_method(:install) do
         bin.install "logviewer"
       end
     end
